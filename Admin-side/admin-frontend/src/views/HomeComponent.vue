@@ -2,19 +2,18 @@
   <div class="box-form">
     <div class="left">
       <div class="overlay">
-        <img class="logo-left" src="@/assets/GapoLogo.png" alt="hi">
-        <h2 class="left-title">RabGuard</h2>
-       </div>
-    </div>
+        <img class="logo-left" src="@/assets/Rabguard_Logo2.png" alt="hi">
+    </div>  
+  </div>
 
     <div class="right">
-      <img class="logo-right" src="@/assets/GapoLogo.png" alt="hi">
+      <img class="logo-right" src="@/assets/Logo-Health.png" alt="hi">
       <h1>Olongapo City</h1>
-      <h2>Animal Bite Center</h2>
-      <div class="inputs">
-        <input v-model="username" type="text" placeholder="Email">
+      <h2>Animal Bite Treatment Center</h2>
+      <div class="inputs">  
+       <span><i class="fa-regular fa-envelope"></i></span><input v-model="username" type="text" placeholder="Email">
         <br>
-        <input v-model="password" type="password" placeholder="Password">
+        <span><i class="fa-solid fa-lock"></i></span><input v-model="password" type="password" placeholder="Password">
       </div>
 
       <br><br>
@@ -47,12 +46,27 @@ export default {
 </script>
 
 <style scoped>
+.circle{
+  position: absolute;
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  border-radius: 200px;
+  z-index: -1;
+  margin-top: 125px;
+  margin-left: -140px;
+  opacity: 50%;
+}
+
 .logo-left{
-  height: 20rem;
-  width: 20rem;
+  margin-top: 80px;
+  margin-left: -50px;
+  height: 22rem;
+  width: 22rem;
   transition: 0.2s ease-out;
   align-self: center;
   border-radius: 5rem;
+  z-index:-1;
 }
 
 .logo-right{
@@ -64,7 +78,7 @@ export default {
 }
 
 body {
-  background-image: white;
+  background-image: url('@/assets/Olongapo_City_Hall.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -74,8 +88,8 @@ body {
 
 .box-form {
   margin-top: 45px;
-  margin-left: 130px;
-  width: 80%;
+  margin-left: 260px;
+  width: 60%;
   background: #FFFFFF;
   border-radius: 10px;
   overflow: hidden;
@@ -111,7 +125,7 @@ body {
   padding: 30px;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(135deg, #5b00ff 10%, blue 100%);
+  background-color:#339933;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -127,7 +141,7 @@ body {
   font-weight: 900;
 }
 .box-form .left .overlay span a {
-  background: #3b5998;
+  background: pink;
   color: #FFFFFF;
   margin-top: 10px;
   padding: 14px 50px;
@@ -162,7 +176,7 @@ body {
   overflow: hidden;
 }
 .box-form .right input {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   margin-top: 25px;
   font-size: 16px;
@@ -174,11 +188,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 .box-form .right .remember-me--forget-password input {
   margin: 0;
   margin-right: 7px;
   width: auto;
+}
+
+.box-form .right .remember-me--forget-password a {
+  text-decoration: none;
 }
 
 .login-button {
@@ -190,14 +209,14 @@ body {
   display: inline-block;
   border: 0;
   outline: 0;
-  box-shadow: 0px 4px 20px 0px #49c628a6;
   background-image: linear-gradient(135deg, blue 10%, #5b00ff 100%);
   transition: background-image 0.3s;
   text-decoration: none;
+  opacity:80%;
 }
 
 .login-button:hover {
-  background-image: linear-gradient(135deg, #5b00ff 10%, blue 100%);
+  opacity: 100%;
 }
 
 label {
